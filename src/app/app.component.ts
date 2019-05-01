@@ -18,6 +18,11 @@ export class AppComponent {
 
   title = 'stripeheader';
   foo(v, data) {
+    if (data.key == "developers") {
+      v = '4%';
+    } else if (data.key == "product") {
+      v = '8%';
+    }
     document.querySelector('.boxSlide').setAttribute('style', 'display:block;left:' + v + '');
     this.dataFromHeader = data;
     this.itemsKey = data.key;

@@ -9,6 +9,7 @@
     transition:all 1s;
     -webkit-transition:all 500ms;
     top: 58px;
+    border-radius: 5px;
   }
 .header {
   background-color: #fff;
@@ -23,7 +24,6 @@
   padding: 0;
   list-style: none;
   overflow: hidden;
-  background-color: #fff;
 }
 
 .header li a {

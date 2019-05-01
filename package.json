@@ -8,7 +8,6 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng here2e",
-    "postinstall": "ng build --aot -prod",
     "heroku-postbuild": "ng build --prod",
     "deploy": "ng build --prod --base-href https://anki-dev.github.io/stripeheader/ && angular-cli-ghpages --branch master"
   },

@@ -11,13 +11,18 @@ export class AppComponent {
 
   headerData: any;
   items: any;
+  itemsKey: any;
+  dataFromHeader: any;
 
   constructor(private http: HttpClient) { }
 
   title = 'stripeheader';
   foo(v, data) {
     document.querySelector('.boxSlide').setAttribute('style', 'display:block;left:' + v + '');
-    this.items = data;
+    this.dataFromHeader = data;
+    this.itemsKey = data.key;
+    this.items = data.value;
+
   }
   moo() {
     document.querySelector('.boxSlide').setAttribute('style', 'display:none;left:0')

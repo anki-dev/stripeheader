@@ -1,10 +1,14 @@
-<div class="wrapper">
-  <ul *ngFor="let item of headerData | keyvalue">
-    <li (mouseover)="foo('0%', item.value)" (mouseout)="moo()">{{item.key}}</li>
-    <div class="boxSlide" id="myDIV">
-      <ul *ngFor="let itemDesc of items ">
+<div class="header">
+  <input class="menu-btn" type="checkbox" id="menu-btn" />
+  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+  <ul *ngFor="let item of headerData | keyvalue" class="menu">
+    <li (mouseover)="foo('0%', item)" (mouseout)="moo()">
+      <a href="javascript:void(0)">{{item.key}}</a>
+    </li>
+    <div class="boxSlide" (mouseover)="foo('0%', dataFromHeader)" (mouseout)="moo()">
+      <ul *ngFor="let itemDesc of items">
         <li *ngFor="let desc of itemDesc| keyvalue">
-          {{desc.key}}:{{desc.value}}
+          <a href="javascript:void(0)">{{desc.value}}</a>
         </li>
       </ul>
     </div>
